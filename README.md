@@ -16,7 +16,6 @@
 ### 🖥 Backend (ver repositório separado)
 - **Node.js** — Ambiente JavaScript assíncrono e orientado a eventos.
 - **Express.js** — Framework minimalista para rotas e controle de requisições.
-- **Prisma ORM** — Mapeamento objeto-relacional moderno.
 - **MySQL (Clever Cloud)** — Banco de dados relacional.
 
 ---
