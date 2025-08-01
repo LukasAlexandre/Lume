@@ -1,0 +1,9 @@
+/* styles/index.css ou outro CSS global */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10px; /* define altura do header */
+  background-color: #111;
+  z-index: 1000;
+}
