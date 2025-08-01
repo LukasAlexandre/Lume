@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import MenuHamburguer from "../../components/MenuHamburguer.jsx";
-import ForYouSection from "../../components/ForYouSection.jsx";
-import TrendingLume from "../../components/TrendingLume.jsx";
-import { HomeContainer, MainContent, SideBar } from "./Style.js";
+import MenuHamburguer from "../../components/MenuHamburguer/MenuHamburguer.jsx";
+import ForYouSection from "../../components/ForYou/ForYouSection.jsx";
+import TrendingLume from "../../components/Trending/TrendingLumes.jsx";
+import { HomeContainer, MainContent, SideBar, MenuButton} from "./Style.js";
 
 //Inicializa encapsulamento do componente Home
 const Home = () => {
 
     //Instacia a variável de estado para o menu hamburguer
     //E a função para alterar o estado do menu hamburguer
-    const [IsMenuOpen, SetIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
-        SetIsMenuOpen(!IsMenuOpen);
+        setIsMenuOpen(!isMenuOpen);
     }
 
 
@@ -20,10 +20,11 @@ const Home = () => {
     return (
         //Style container para a page principal
         <HomeContainer>
-            
+            {/*Botão hamburguer*/}
+            <MenuButton>☰ Menu</MenuButton>
             {/*Menu hamburguer com a prop isOpen para controlar o estado do menu
             E a prop toggleMenu para alterar o estado do menu*/}
-            <MenuHamburguer isOpen={IsMenuOpen} toggleMenu={toggleMenu} />
+            <MenuHamburguer isOpen={isMenuOpen} toggleMenu={toggleMenu} />
 
             {/*Tag de referenciação do main de uma section, usada como tag style*/}
             <MainContent>
@@ -39,3 +40,4 @@ const Home = () => {
         </HomeContainer>
     );
 }
+export default Home;
