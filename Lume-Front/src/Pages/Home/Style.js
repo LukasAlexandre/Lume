@@ -24,15 +24,15 @@ export const SideBar = styled.aside`
 export const MenuButton = styled.button`
   position: fixed; // Posição fixa para o botão
   top: 80px; // Distância do topo da viewport
-  left: 20px; 
-  z-index: 1100;
-  background: #00d4aa;
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-weight: bold;
+  left: 20px; // Distância da esquerda da viewport
+  z-index: 1100; // Z-index para garantir que o botão fique acima de outros elementos
+  background: #00d4aa; // Cor de fundo do botão
+  color: #000; // Cor do texto do botão
+  border: none; // Sem borda
+  border-radius: 8px; // Bordas arredondadas
+  padding: 10px 15px; // Espaçamento interno do botão
+  cursor: pointer; // Cursor de ponteiro ao passar o mouse
+  font-weight: bold; // Texto em negrito
 
   @media (min-width: 1025px) {
     display: none; // Oculta o botão em telas maiores

@@ -4,12 +4,13 @@ import './styles/index.css'
 import Home from './Pages/Home/Home.jsx';
 import Header from './components/Header.jsx';
 import './index.css';
+import ForYouSection from './components/ForYou/ForYouSection.jsx';
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Header />
-    <Home />
+    <Header/>
+    <Home/>
   </StrictMode>
 )
