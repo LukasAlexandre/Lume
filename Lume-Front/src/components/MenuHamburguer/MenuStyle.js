@@ -1,4 +1,5 @@
-import styled from 'styled-components'; // Importa a biblioteca styled-components para estilização
+import styled from 'styled-components';
+// Importa a biblioteca styled-components para estilização
 
 // Estilização do container principal da página Home
 export const MenuContainer = styled.div`

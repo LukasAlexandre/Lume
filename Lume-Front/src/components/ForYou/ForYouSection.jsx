@@ -20,7 +20,7 @@ import {
     PostAction,
     ActionButton,
     ActionCount
-} from "./Style"
+} from "./ForYouStyle.js"
 
 //inicializando componente 
 const ForYouSection = () => {

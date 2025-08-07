@@ -1,14 +1,14 @@
 import React from "react"; // Importa o React
 import {  // Importa os componentes estilizados
     MenuContainer,
-     MenuHeader, 
-     MenuTittle, 
-     MenuList, 
-     MenuItem, 
-     MenuIcon, 
-     MenuText, 
-     ShareButton 
-} from "./Style";
+    MenuHeader,
+    MenuTittle,
+    MenuList,
+    MenuItem,
+    MenuIcon,
+    MenuText,
+    ShareButton
+} from "./MenuStyle.js"; // Importa os estilos do menu hamburguer
 
 // Componente MenuHamburguer
 // Recebe as props isOpen e toggleMenu para controlar o estado do menu
@@ -27,27 +27,28 @@ const MenuHamburguer = ({ isOpen, toggleMenu }) => {
     ]
 
 
-return (
-    // Componente estilizado que representa o menu hamburguer
+    return (
+        // Componente estilizado que representa o menu hamburguer
         // O estilo do menu depende da prop isOpen, que controla se o menu está aberto ou fechado
-       <MenuContainer isOpen={isOpen}>
-        {/* Cabeçalho do menu */}   
-        <MenuHeader>
-            {/* Título do menu estilizado */}
-            <MenuTittle>LUME</MenuTittle>
-        </MenuHeader>
-        {/* Lista de itens do menu */}
-        <MenuList>
-            {/* Mapeia os itens do menu e cria um MenuItem para cada um */}
-            {menuItens.map(item => (
-                <MenuItem key={item.id} active={item.active}>
-                    <MenuIcon>{item.icon}</MenuIcon>
-                    <MenuText>{item.text}</MenuText>
-                </MenuItem>
-            ))}
-            {/* Botão de compartilhamento estilizado */}
-            <ShareButton>Compartilhar</ShareButton>
-        </MenuList>
-       </MenuContainer>
-)}
+        <MenuContainer isOpen={isOpen}>
+            {/* Cabeçalho do menu */}
+            <MenuHeader>
+                {/* Título do menu estilizado */}
+                <MenuTittle>LUME</MenuTittle>
+            </MenuHeader>
+            {/* Lista de itens do menu */}
+            <MenuList>
+                {/* Mapeia os itens do menu e cria um MenuItem para cada um */}
+                {menuItens.map(item => (
+                    <MenuItem key={item.id} active={item.active}>
+                        <MenuIcon>{item.icon}</MenuIcon>
+                        <MenuText>{item.text}</MenuText>
+                    </MenuItem>
+                ))}
+                {/* Botão de compartilhamento estilizado */}
+                <ShareButton>Compartilhar</ShareButton>
+            </MenuList>
+        </MenuContainer>
+    )
+}
 export default MenuHamburguer;

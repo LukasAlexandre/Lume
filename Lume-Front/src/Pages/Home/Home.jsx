@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import MenuHamburguer from "../../components/MenuHamburguer/MenuHamburguer.jsx";
 import ForYouSection from "../../components/ForYou/ForYouSection.jsx";
-import TrendingLume from "../../components/Trending/TrendingLumes.jsx";
-import { HomeContainer, MainContent, SideBar, MenuButton} from "./Style.js";
+import TrendingLumes from "../../components/Trending/TrendingLumes.jsx";
+import { HomeContainer, MainContent, SideBar, MenuButton} from "./HomeStyle.js";
 
 //Inicializa encapsulamento do componente Home
 const Home = () => {
@@ -35,7 +35,7 @@ const Home = () => {
             {/*Tag de referenciação do side da page, usada como tag style*/}    
             <SideBar>
                 {/*Não usa como estilo, pois é uma tag de referência a um arquivo*/}
-                <TrendingLume />
+                <TrendingLumes />
             </SideBar>
         </HomeContainer>
     );
