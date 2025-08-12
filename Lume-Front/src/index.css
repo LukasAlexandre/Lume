@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /* Layout */
+    --max: 1200px;
+    --gutter: 24px;
+    --slidebas: 260px;
+    --aside: 360px;
+
+    /*escala de espaço (multiplicando de 4/8 ajuda)*/
+    --s-1: 4px;
+    --s-2: 8px;
+    --s-3: 12px;
+    --s-4: 16px;
+    --s-5: 24px;
+    --s-6: 32px;
+
+    /* visual */
+  --bg-0:#0b0b0b;
+  --bg-1:#111214;
+  --stroke:#26262b;
+  --text-1:#eaeaea;
+  --text-2:#a1a1aa;
+  --brand:#00d19a;
+
+  --radius: 12px;
+
+}
+/* reset útil p/ consistência */
+*{ box-sizing:border-box; }
+html { font-family: "Inter", system-ui, sans-serif; line-height:1.6; }
+body { background: var(--bg-0); color: var(--text-1); margin:0; }
+*,*::before,*::after{ font:inherit; }

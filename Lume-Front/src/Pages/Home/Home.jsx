@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MenuHamburguer from "../../components/MenuHamburguer/MenuHamburguer.jsx";
 import ForYouSection from "../../components/ForYou/ForYouSection.jsx";
 import TrendingLumes from "../../components/Trending/TrendingLumes.jsx";
-import { HomeContainer, MainContent, SideBar, MenuButton} from "./HomeStyle.js";
+import { HomeContainer, MainContent, SideBar, MenuButton, NavContainer} from "./HomeStyle.js";
 
 //Inicializa encapsulamento do componente Home
 const Home = () => {
@@ -24,8 +24,9 @@ const Home = () => {
             <MenuButton>☰ Menu</MenuButton>
             {/*Menu hamburguer com a prop isOpen para controlar o estado do menu
             E a prop toggleMenu para alterar o estado do menu*/}
+            <NavContainer>
             <MenuHamburguer isOpen={isMenuOpen} toggleMenu={toggleMenu} />
-
+                </NavContainer>
             {/*Tag de referenciação do main de uma section, usada como tag style*/}
             <MainContent>
                 {/*Não usa como estilo, pois é uma tag de referência a um arquivo*/}

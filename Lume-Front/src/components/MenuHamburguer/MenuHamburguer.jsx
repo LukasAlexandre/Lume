@@ -24,8 +24,7 @@ const MenuHamburguer = ({ isOpen, toggleMenu }) => {
         { id: 6, icon: '💾', text: 'Salvos' },
         { id: 7, icon: '👤', text: 'Perfil' },
         { id: 8, icon: '⚙️', text: 'Configurações' }
-    ]
-
+    ];
 
     return (
         // Componente estilizado que representa o menu hamburguer
@@ -36,19 +35,21 @@ const MenuHamburguer = ({ isOpen, toggleMenu }) => {
                 {/* Título do menu estilizado */}
                 <MenuTittle>LUME</MenuTittle>
             </MenuHeader>
+
             {/* Lista de itens do menu */}
             <MenuList>
                 {/* Mapeia os itens do menu e cria um MenuItem para cada um */}
                 {menuItens.map(item => (
-                    <MenuItem key={item.id} active={item.active}>
+                    <MenuItem key={item.id} active={item.active} onClick={toggleMenu /* fecha no mobile */}>
                         <MenuIcon>{item.icon}</MenuIcon>
                         <MenuText>{item.text}</MenuText>
                     </MenuItem>
                 ))}
+
                 {/* Botão de compartilhamento estilizado */}
                 <ShareButton>Compartilhar</ShareButton>
             </MenuList>
         </MenuContainer>
-    )
-}
+    );
+};
 export default MenuHamburguer;
